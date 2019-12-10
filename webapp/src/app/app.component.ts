@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 import { IAccountData } from './app.interface';
 import { Subscription } from 'rxjs';
 
-//TODO: unit tests for this class
+// TODO: unit tests for this class
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy  {
     this.getAccuntsInfo = this.$service.getAccuntsInfo().subscribe(
       (data) => {
         this.accountData = data.map(x => {
-          return {
+          return {// TODO: find a better way to do this
             ...x,
             phoneNumber: this.formatPhoneNumber(x.phoneNumber),
             paymentDueDate: x.paymentDueDate ? new Date(x.paymentDueDate).toLocaleDateString() : null,
