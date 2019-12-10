@@ -50,6 +50,10 @@ export class AppComponent implements OnInit, OnDestroy  {
     return null;
   }
 
+  public getCurrentYear() {
+    return new Date().getFullYear();
+  }
+
   ngOnInit(): void {
     this.getAccountData();
   }

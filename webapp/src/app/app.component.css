@@ -54,7 +54,7 @@ footer {
   grid-template-rows: 10px 100px auto;
 }
 #account-grid {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-row-start: 3;
 }
 .account-column {
@@ -92,4 +92,5 @@ footer {
   place-self: end;
   grid-row-start: 2;
   grid-column-start: 2;
+  color: #fff;
 }

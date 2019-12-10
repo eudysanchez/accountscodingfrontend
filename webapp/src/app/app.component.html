@@ -58,6 +58,7 @@
     </section>
     </main>
     <footer class="grid">
-      <p class="copy">&copy;<script>document.write(new Date().getFullYear())</script></p>
+      <!-- The year was not being displayed; i moved the logic to the ts file -->
+      <p class="copy">&copy; {{getCurrentYear()}}</p>
     </footer>
 </article>
